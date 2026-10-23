@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List Your Property | StudentStay</title>
+  <meta name="description" content="Register as a property owner, add your room listing and manage it from your dashboard.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="list-property">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="StudentStay home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/></svg><span>StudentStay</span></a>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="accommodation.html">Find Accommodation</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--sm header-cta" href="list-property.html" aria-current="page">List Property</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="container">
+        <h1>List your property</h1>
+        <p>Reach students looking for rooms in Freetown. Listing is free during our launch period.</p>
+      </div>
+    </div>
+
+    <section class="section section--soft" style="padding-top:1.5rem">
+      <div class="container">
+        <ol class="owner-steps" aria-label="Steps to list a property">
+          <li id="step-account">Register or log in</li>
+          <li id="step-listing">Add your listing</li>
+          <li id="step-manage">Manage enquiries</li>
+        </ol>
+
+        <!-- Step 1: account -->
+        <div id="account-area" class="list-layout">
+          <div>
+            <h2>Why list with StudentStay?</h2>
+            <p>Students can see your price, photos and facilities before they call, so the enquiries you get are from people who are already interested.</p>
+            <img src="images/kingtom-studios.jpg" alt="Kingtom Studios, a student residence listed on StudentStay" width="1200" height="800" style="border-radius:8px" loading="lazy">
+          </div>
+          <div class="card">
+            <div class="tabs" role="tablist" aria-label="Account">
+              <button class="tab" role="tab" id="tab-register" aria-selected="true" aria-controls="panel-register" type="button">Register</button>
+              <button class="tab" role="tab" id="tab-login" aria-selected="false" aria-controls="panel-login" tabindex="-1" type="button">Log in</button>
+            </div>
+            <div id="panel-register" class="panel" role="tabpanel" aria-labelledby="tab-register">
+              <form id="register-form" class="form-grid" novalidate>
+                <div class="field">
+                  <label for="reg-name">Full name</label>
+                  <input id="reg-name" name="reg-name" type="text" autocomplete="name" aria-describedby="reg-name-error">
+                  <p class="field-error" id="reg-name-error"></p>
+                </div>
+                <div class="field">
+                  <label for="reg-email">Email</label>
+                  <input id="reg-email" name="reg-email" type="email" autocomplete="email" aria-describedby="reg-email-error">
+                  <p class="field-error" id="reg-email-error"></p>
+                </div>
+                <div class="field">
+                  <label for="reg-phone">Phone</label>
+                  <input id="reg-phone" name="reg-phone" type="tel" autocomplete="tel" placeholder="+232 ..." aria-describedby="reg-phone-error">
+                  <p class="field-error" id="reg-phone-error"></p>
+                </div>
+                <div class="field">
+                  <label for="reg-password">Password</label>
+                  <input id="reg-password" name="reg-password" type="password" autocomplete="new-password" aria-describedby="reg-password-error">
+                  <p class="field-error" id="reg-password-error"></p>
+                </div>
+                <button class="btn btn--block" type="submit">Create account</button>
+              </form>
+            </div>
+            <div id="panel-login" class="panel" role="tabpanel" aria-labelledby="tab-login" hidden>
+              <form id="login-form" class="form-grid" novalidate>
+                <div class="field">
+                  <label for="login-email">Email</label>
+                  <input id="login-email" name="login-email" type="email" autocomplete="email" aria-describedby="login-email-error">
+                  <p class="field-error" id="login-email-error"></p>
+                </div>
+                <div class="field">
+                  <label for="login-password">Password</label>
+                  <input id="login-password" name="login-password" type="password" autocomplete="current-password" aria-describedby="login-password-error">
+                  <p class="field-error" id="login-password-error"></p>
+                </div>
+                <button class="btn btn--block" type="submit">Log in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Steps 2 and 3: add listing + dashboard -->
+        <div id="owner-area" hidden>
+          <div class="results-bar">
+            <h2 style="margin:0">Welcome, <span id="owner-name"></span></h2>
+            <button class="btn btn--outline btn--sm" type="button" id="sign-out">Sign out</button>
+          </div>
+
+          <div class="list-layout">
+            <section class="card panel" aria-labelledby="add-title">
+              <h3 id="add-title">Add a listing</h3>
+              <div class="alert alert--success" id="listing-success" role="status" hidden></div>
+              <form id="listing-form" class="form-grid" novalidate>
+                <div class="field">
+                  <label for="p-title">Listing title</label>
+                  <input id="p-title" name="p-title" type="text" placeholder="e.g. Quiet single room near FBC" aria-describedby="p-title-error">
+                  <p class="field-error" id="p-title-error"></p>
+                </div>
+                <div class="field">
+                  <label for="p-location">Location</label>
+                  <select id="p-location" name="p-location" aria-describedby="p-location-error"><option value="">Choose a location</option></select>
+                  <p class="field-error" id="p-location-error"></p>
+                </div>
+                <div class="field">
+                  <label for="p-type">Room type</label>
+                  <select id="p-type" name="p-type" aria-describedby="p-type-error"><option value="">Choose a room type</option></select>
+                  <p class="field-error" id="p-type-error"></p>
+                </div>
+                <div class="field">
+                  <label for="p-price">Monthly rent (SLE)</label>
+                  <input id="p-price" name="p-price" type="number" min="100" step="50" aria-describedby="p-price-error">
+                  <p class="field-error" id="p-price-error"></p>
+                </div>
+                <fieldset>
+                  <legend class="label">Facilities</legend>
+                  <div id="p-facilities" class="checks"></div>
+                </fieldset>
+                <div class="field">
+                  <label for="p-description">Description</label>
+                  <textarea id="p-description" name="p-description" placeholder="Describe the room, the house and what is included in the rent." aria-describedby="p-description-error"></textarea>
+                  <p class="field-error" id="p-description-error"></p>
+                </div>
+                <button class="btn btn--block" type="submit">Submit listing</button>
+              </form>
+            </section>
+
+            <section class="card panel" aria-labelledby="dash-title">
+              <h3 id="dash-title">Your dashboard</h3>
+              <p id="dash-summary" class="dash-summary"></p>
+              <p class="dash-hint">Tap any part of a listing (name, location, rent or status) to view, edit, change its status or delete it.</p>
+              <div class="table-scroll">
+                <table class="dashboard-table">
+                  <caption class="visually-hidden">Your submitted listings</caption>
+                  <thead><tr><th scope="col">Listing</th><th scope="col">Location</th><th scope="col">Rent</th><th scope="col">Status</th></tr></thead>
+                  <tbody id="dashboard-body"></tbody>
+                </table>
+              </div>
+              <div class="alert alert--success" id="dash-alert" role="status" hidden style="margin-top:1rem"></div>
+              <p style="margin-top:1rem;font-size:.9rem">Enquiries from students are sent to your email and phone. You can reply to them directly.</p>
+            </section>
+          </div>
+        </div>
+
+        <!-- View / edit a listing (opened from any cell of the dashboard) -->
+        <dialog id="listing-dialog" class="dialog" aria-labelledby="dlg-title">
+          <form id="edit-form" class="form-grid" novalidate>
+            <div class="dialog-head">
+              <div>
+                <h3 id="dlg-title">Listing details</h3>
+                <p class="dialog-sub" id="dlg-submitted"></p>
+              </div>
+              <button type="button" class="dialog-close" data-close aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+              </button>
+            </div>
+            <div class="field">
+              <label for="e-title">Listing title</label>
+              <input id="e-title" name="e-title" type="text" aria-describedby="e-title-error">
+              <p class="field-error" id="e-title-error"></p>
+            </div>
+            <div class="dialog-grid">
+              <div class="field">
+                <label for="e-location">Location</label>
+                <select id="e-location" name="e-location" aria-describedby="e-location-error"></select>
+                <p class="field-error" id="e-location-error"></p>
+              </div>
+              <div class="field">
+                <label for="e-type">Room type</label>
+                <select id="e-type" name="e-type"></select>
+              </div>
+              <div class="field">
+                <label for="e-price">Monthly rent (SLE)</label>
+                <input id="e-price" name="e-price" type="number" min="100" step="50" aria-describedby="e-price-error">
+                <p class="field-error" id="e-price-error"></p>
+              </div>
+              <div class="field">
+                <label for="e-status">Status</label>
+                <select id="e-status" name="e-status">
+                  <option>Under review</option>
+                  <option>Live</option>
+                  <option>Rented</option>
+                  <option>Paused</option>
+                </select>
+              </div>
+            </div>
+            <fieldset>
+              <legend class="label">Facilities</legend>
+              <div id="e-facilities" class="checks"></div>
+            </fieldset>
+            <div class="field">
+              <label for="e-description">Description</label>
+              <textarea id="e-description" name="e-description" aria-describedby="e-description-error"></textarea>
+              <p class="field-error" id="e-description-error"></p>
+            </div>
+            <div class="dialog-actions">
+              <button type="button" class="btn btn--danger" id="delete-listing">Delete listing</button>
+              <div class="form-actions">
+                <button type="button" class="btn btn--outline" data-close>Cancel</button>
+                <button type="submit" class="btn">Save changes</button>
+              </div>
+            </div>
+          </form>
+        </dialog>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">StudentStay
+        <p>Student accommodation in Freetown, Sierra Leone</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html#faqs">Privacy &amp; terms</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; <span data-year>2026</span> StudentStay. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

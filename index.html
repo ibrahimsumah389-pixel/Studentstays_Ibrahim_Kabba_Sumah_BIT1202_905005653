@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudentStay | Find Your Perfect Student Home</title>
+  <meta name="description" content="Search affordable, safe student rooms and apartments in Freetown. Compare prices, locations and facilities.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="StudentStay home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/></svg><span>StudentStay</span></a>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="accommodation.html">Find Accommodation</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--sm header-cta" href="list-property.html">List Property</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <h1 id="hero-title">Find your perfect student home</h1>
+          <p class="hero-tagline">Affordable, safe and convenient accommodation near your campus.</p>
+          <a class="btn btn--lg" href="accommodation.html">Find Accommodation <span aria-hidden="true">›</span></a>
+        </div>
+        <div class="hero-media">
+          <img src="images/students.jpg" alt="Four smiling students studying together outside Fourah Bay College" width="1200" height="800" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section class="search-panel" aria-labelledby="search-title">
+      <div class="container">
+        <h2 id="search-title" class="section-title">Search accommodation</h2>
+        <form class="form-grid" action="accommodation.html" method="get" role="search">
+          <div class="field">
+            <label for="home-location">Location</label>
+            <select id="home-location" name="location">
+              <option value="">Any location</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="label" id="price-label">Price range (SLE / month)</span>
+            <div class="price-pair" role="group" aria-labelledby="price-label">
+              <label class="visually-hidden" for="home-min">Minimum price</label>
+              <input id="home-min" name="min" type="number" min="0" step="100" placeholder="Min price">
+              <label class="visually-hidden" for="home-max">Maximum price</label>
+              <input id="home-max" name="max" type="number" min="0" step="100" placeholder="Max price">
+            </div>
+          </div>
+          <div class="field">
+            <label for="home-type">Room type</label>
+            <select id="home-type" name="type">
+              <option value="">Any room type</option>
+            </select>
+          </div>
+          <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg> Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title" class="section-title">Featured accommodations</h2>
+        <div id="featured-grid" class="card-grid card-grid--3">
+          <noscript><p>Turn on JavaScript to see featured listings, or <a href="accommodation.html">browse all accommodation</a>.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="owner-title">
+      <div class="container">
+        <div>
+          <h2 id="owner-title">Have a room to rent?</h2>
+          <p style="margin:0">List it on StudentStay and reach students looking for a place near campus.</p>
+        </div>
+        <a class="btn btn--lg" href="list-property.html">List your property</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">StudentStay
+        <p>Student accommodation in Freetown, Sierra Leone</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html#faqs">Privacy &amp; terms</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; <span data-year>2026</span> StudentStay. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Accommodation | StudentStay</title>
+  <meta name="description" content="Filter student accommodation in Freetown by location, price, room type and facilities.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="search">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="StudentStay home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/></svg><span>StudentStay</span></a>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="accommodation.html" aria-current="page">Find Accommodation</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--sm header-cta" href="list-property.html">List Property</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-header">
+      <div class="container">
+        <h1>Find your accommodation</h1>
+        <p>Filter by location, price, room type and facilities. Results update as you choose.</p>
+      </div>
+    </div>
+
+    <section class="section section--soft" style="padding-top:1.5rem" aria-label="Search and results">
+      <div class="container">
+        <form id="filter-form" class="card filters" role="search" aria-label="Filter accommodation">
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-location">Location</label>
+              <select id="f-location" name="location"><option value="">Any location</option></select>
+            </div>
+            <div class="field">
+              <span class="label" id="f-price-label">Price range (SLE / month)</span>
+              <div class="price-pair" role="group" aria-labelledby="f-price-label">
+                <label class="visually-hidden" for="f-min">Minimum price</label>
+                <input id="f-min" name="min" type="number" min="0" step="100" placeholder="Min price">
+                <label class="visually-hidden" for="f-max">Maximum price</label>
+                <input id="f-max" name="max" type="number" min="0" step="100" placeholder="Max price">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-type">Room type</label>
+              <select id="f-type" name="type"><option value="">Any room type</option></select>
+            </div>
+            <fieldset>
+              <legend class="label">Facilities</legend>
+              <div id="f-facilities" class="checks"></div>
+            </fieldset>
+            <div class="form-actions">
+              <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg> Search</button>
+              <button class="btn btn--outline" type="button" id="clear-filters">Clear</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="results-bar">
+          <p id="results-count" class="results-count" aria-live="polite">Loading places…</p>
+          <div class="sort-field">
+            <label for="sort" class="label">Sort by</label>
+            <select id="sort">
+              <option value="recommended">Recommended</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name">Name A–Z</option>
+            </select>
+            <a class="btn btn--outline btn--sm" href="saved.html">Compare saved <span data-saved-count></span></a>
+          </div>
+        </div>
+        <div id="active-filters" class="chips" aria-label="Active filters"></div>
+
+        <ul id="result-list" class="result-list">
+          <noscript><li>Turn on JavaScript to search and filter listings.</li></noscript>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">StudentStay
+        <p>Student accommodation in Freetown, Sierra Leone</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html#faqs">Privacy &amp; terms</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; <span data-year>2026</span> StudentStay. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/listings.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
